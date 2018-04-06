@@ -13,4 +13,14 @@ input[type=text]{
   text-align: center;
   border: 3px solid #eee;
   box-shadow: 0 2px 2px #ccc; 
+  font-size: 16px;
+  width: 500px;
+  outline: none;
+  display: block;
+  padding: 10px;
+  margin: 0 auto 24px;
+}
+
+ul{
+  list-style: none;
 }

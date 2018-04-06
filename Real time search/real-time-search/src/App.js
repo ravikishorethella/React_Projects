@@ -6473,12 +6473,12 @@ class App extends Component {
       <div className="App">
         <header className="App-header">
           <h1 className="App-title">React Search</h1>
-          <p className="App-content">start typing your favorite programming language... </p>
+          <p className="App-content">Start typing your favorite programming language... </p>
         </header>
-        {/* <div className="App-intro">
-          
-        </div> */}
-        <Search list={pgmgLang} />
+        <div className="App-intro">
+          <Search list={pgmgLang} />
+        </div>
+
       </div>
     );
   }
