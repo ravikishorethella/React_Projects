@@ -363,7 +363,7 @@ class App extends Component {
         "item": {
           "@id": "http://en.wikipedia.org/wiki/App_Inventor_for_Android_(programming_language)",
           "@type": "ComputerLanguage",
-          "name": "App Inventor for Android's visual block language"
+          "name": "App Inventor for Android's VBL"
         },
         "position": 39
       },

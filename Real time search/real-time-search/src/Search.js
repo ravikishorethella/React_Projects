@@ -31,7 +31,7 @@ class Search extends React.Component {
                 <ul>
                     {
                         pgmgLang.map((elem, i) => {
-                            return <li key={i}>{elem.item.name} <a href={elem.item["@id"]}>{elem.item["@id"]}</a></li>
+                            return <li key={i}>{elem.item.name} <a href={elem.item["@id"]} target="_blank"> Wiki link</a></li>
                         })
                     }
                 </ul>

@@ -7,6 +7,7 @@
 body{
   padding: 50px; 
   text-align: center;
+  background-image: linear-gradient(260deg, #45718f 0%, #c16ecf 100%);
 }
 
 input[type=text]{
@@ -14,13 +15,38 @@ input[type=text]{
   border: 3px solid #eee;
   box-shadow: 0 2px 2px #ccc; 
   font-size: 16px;
-  width: 500px;
+  width: 436px;
   outline: none;
   display: block;
   padding: 10px;
+  color: #7B8585;
   margin: 0 auto 24px;
 }
 
 ul{
   list-style: none;
+  display: inline-block;
+  width: 460px;
+  text-align: left;
+}
+
+ul li{
+  display: block;
+  padding: 15px 20px;
+  background-color: #f8f8f8;
+  color: #7B8585;
+  margin-bottom: 3px; 
+  position: relative;
+  transition: 0.2s;
+}
+
+ul li a{
+  position: absolute;
+  left: 360px;
+  line-height: 16px;
+  color: #969d9d;
+}
+
+ul li:hover{
+  background-color: #d8f2f1;
 }
