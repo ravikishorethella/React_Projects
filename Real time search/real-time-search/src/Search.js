@@ -15,9 +15,26 @@ class Search extends React.Component {
     }
 
     render() {
+
+        let pgmgLang = this.props.list;
+        let searchName = this.state.searchName.trim().toLowerCase();
+
+        if (searchName.length > 0) {
+            pgmgLang = pgmgLang.filter((i) => {
+                return i.item.name.toLowerCase().match(searchName);
+            })
+        }
+
         return (
             <div>
-                Testing only....
+                <input type="text" value={this.state.searchName} onChange={this.onChange} placeholder="Search here..." />
+                <ul>
+                    {
+                        pgmgLang.map((elem, i) => {
+                            return <li key={i}>{elem.item.name} <a href={elem.item["@id"]}>{elem.item["@id"]}</a></li>
+                        })
+                    }
+                </ul>
             </div>
         )
 
