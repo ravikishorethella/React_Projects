@@ -15,4 +15,17 @@ class MainProfileCard extends React.Component {
             following: ''
         }
     }
+
+
+
+    render() {
+        return (
+            <div>
+                Here goes the github content
+            </div>
+        )
+    }
+
 }
+
+export default MainProfileCard;
