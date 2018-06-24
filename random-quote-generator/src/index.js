@@ -1,6 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import Quotes from "./Quotes";
+import "./styles.css";
 
 function App() {
   return (

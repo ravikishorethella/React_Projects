@@ -1,6 +1,7 @@
 import React, { Fragment } from "react";
 import { Button, Icon } from "antd";
 import "antd/dist/antd.css";
+import "./styles.css";
 
 class Quotes extends React.Component {
   state = {

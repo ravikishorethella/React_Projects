@@ -1,0 +1,56 @@
+.main {
+    background: #c94b4b;
+    background: -webkit-linear-gradient(to right, #4b134f, #c94b4b);
+    background: linear-gradient(to right, #4b134f, #c94b4b);
+
+    min-height: 100vh;
+    color: white;
+    padding: 10px 0;
+  }
+
+  .main h1 {
+    text-align: center;
+    padding: 30px;
+    font-size: 40px;
+    color: white;
+  }
+
+  .app {
+    border: 2px solid #dddddd;
+    box-shadow: 0 5px 3px #eeeeee;
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translateX(-50%);
+    padding: 15px 20px;
+    width: 80%;
+  }
+
+  .btns {
+    position: fixed;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    /* position: fixed;
+    left: 50%;
+    transform: translateX(-50%); */
+  }
+
+  .btn {
+    margin-right: 10px;
+  }
+
+  .quote {
+    font-size: 20px;
+  }
+
+  .author {
+    font-size: 18px;
+    text-align: center;
+  }
+
+  @media (max-width: 500px) {
+    .app {
+      top: 40%;
+    }
+  }
