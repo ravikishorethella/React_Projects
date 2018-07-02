@@ -1,6 +1,46 @@
 import React, { Component } from "react";
 import "./App.css";
 
+class App extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      options: ["option 1", "option 2", "option 3", "option 4"]
+    };
+  }
+  handleDeleteOptions = () => {
+    this.setState(() => {
+      return {
+        options: []
+      };
+    });
+  };
+  handlePick = () => {
+    const randomNum = Math.floor(Math.random() * this.state.options.length);
+    const option = this.state.options[randomNum];
+    console.log(option);
+  };
+  render() {
+    const title = "To-Do App";
+    const subtitle = "change is good";
+
+    return (
+      <div>
+        <Header title={title} subtitle={subtitle} />
+        <Action
+          hasOptions={this.state.options.length > 0}
+          handlePick={this.handlePick}
+        />
+        <Options
+          options={this.state.options}
+          handleDeleteOptions={this.handleDeleteOptions}
+        />
+        <AddOption />
+      </div>
+    );
+  }
+}
+
 // Header component
 class Header extends Component {
   render() {
@@ -16,13 +56,15 @@ class Header extends Component {
 // Action component
 
 class Action extends Component {
-  handlePick = () => {
-    alert("pick something");
-  };
   render() {
     return (
       <div>
-        <button onClick={this.handlePick}>Do something</button>
+        <button
+          onClick={this.props.handlePick}
+          disabled={!this.props.hasOptions}
+        >
+          Do something
+        </button>
       </div>
     );
   }
@@ -30,13 +72,10 @@ class Action extends Component {
 
 // Options component
 class Options extends Component {
-  handleRemoveAll = () => {
-    console.log(this.props.options);
-  };
   render() {
     return (
       <div>
-        <button onClick={this.handleRemoveAll}>Remove All</button>
+        <button onClick={this.props.handleDeleteOptions}>Remove All</button>
         {this.props.options.map(option => (
           <Option key={option} optionText={option} />
         ))}
@@ -69,22 +108,6 @@ class AddOption extends Component {
           <input type="text" name="option" />
           <button>Add option</button>
         </form>
-      </div>
-    );
-  }
-}
-
-class App extends Component {
-  render() {
-    const title = "To-Do App";
-    const subtitle = "change is good";
-    const options = ["option 1", "option 2", "option 3"];
-    return (
-      <div>
-        <Header title={title} subtitle={subtitle} />
-        <Action />
-        <Options options={options} />
-        <AddOption />
       </div>
     );
   }
