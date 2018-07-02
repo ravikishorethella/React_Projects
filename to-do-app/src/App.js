@@ -16,10 +16,13 @@ class Header extends Component {
 // Action component
 
 class Action extends Component {
+  handlePick = () => {
+    alert("pick something");
+  };
   render() {
     return (
       <div>
-        <button>Do something</button>
+        <button onClick={this.handlePick}>Do something</button>
       </div>
     );
   }
@@ -27,9 +30,13 @@ class Action extends Component {
 
 // Options component
 class Options extends Component {
+  handleRemoveAll = () => {
+    console.log(this.props.options);
+  };
   render() {
     return (
       <div>
+        <button onClick={this.handleRemoveAll}>Remove All</button>
         {this.props.options.map(option => (
           <Option key={option} optionText={option} />
         ))}
@@ -47,12 +54,19 @@ class Option extends Component {
 
 // Add Option component
 class AddOption extends Component {
+  handleAddOption = e => {
+    e.preventDefault();
+    const option = e.target.elements.option.value.trim();
+    if (option) {
+      alert("value returned");
+    }
+  };
   render() {
     return (
       <div>
         <p>This is an add option component</p>
-        <form>
-          <input type="text" />
+        <form onSubmit={this.handleAddOption}>
+          <input type="text" name="option" />
           <button>Add option</button>
         </form>
       </div>
