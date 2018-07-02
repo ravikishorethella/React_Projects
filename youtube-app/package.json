@@ -1,10 +1,8 @@
 {
-  "name": "random-quote-generator",
+  "name": "youtube-app",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "antd": "^3.6.4",
-    "now": "^11.2.4",
     "react": "^16.4.1",
     "react-dom": "^16.4.1",
     "react-scripts": "1.1.4"
@@ -14,5 +12,10 @@
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
+  },
+  "devDependencies": {
+    "eslint-config-prettier": "^2.9.0",
+    "eslint-plugin-prettier": "^2.6.1",
+    "prettier": "^1.13.7"
   }
 }
