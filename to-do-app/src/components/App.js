@@ -3,10 +3,12 @@ import AddOption from "./AddOption";
 import Options from "./Options";
 import Header from "./Header";
 import Action from "./Action";
+import OptionModal from "./OptionModal";
 
 class App extends Component {
   state = {
-    options: []
+    options: [],
+    selectedOption: undefined
   };
   componentDidMount() {
     try {
@@ -22,7 +24,6 @@ class App extends Component {
       const json = JSON.stringify(this.state.options);
       localStorage.setItem("options", json);
     }
-    console.log("this saves the data");
   }
   handleDeleteOptions = () => {
     this.setState(() => ({ options: [] }));
@@ -37,7 +38,9 @@ class App extends Component {
   handlePick = () => {
     const randomNum = Math.floor(Math.random() * this.state.options.length);
     const option = this.state.options[randomNum];
-    alert(option);
+    this.setState(() => ({
+      selectedOption: option
+    }));
   };
   handleAddOption = option => {
     if (!option) {
@@ -47,6 +50,14 @@ class App extends Component {
     }
     this.setState(prevState => ({ options: prevState.options.concat(option) }));
   };
+
+  // OptionModal event
+  handleClearOptionModal = () => {
+    this.setState(() => ({
+      selectedOption: undefined
+    }));
+  };
+
   render() {
     const subtitle = "change is good";
 
@@ -63,6 +74,10 @@ class App extends Component {
           handleDeleteOption={this.handleDeleteOption}
         />
         <AddOption handleAddOption={this.handleAddOption} />
+        <OptionModal
+          selectedOption={this.state.selectedOption}
+          handleClearOptionModal={this.handleClearOptionModal}
+        />
       </div>
     );
   }
