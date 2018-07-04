@@ -1,0 +1,183 @@
+body {
+  font-family: Arial, Helvetica, sans-serifs;
+  font-size: 16px;
+  /* background: #333745; */
+  background: #614385; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #516395,
+    #614385
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #516395,
+    #614385
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.header {
+  background: #20222b;
+  margin-bottom: 48px;
+  padding: 16px 0;
+  color: white;
+}
+
+.header__title {
+  font-size: 32px;
+  margin: 0;
+}
+
+.header__subtitle {
+  color: #a5afd7;
+  font-size: 16px;
+  font-weight: 500;
+  margin: 0;
+}
+
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0 32px;
+}
+
+button {
+  cursor: pointer;
+}
+
+button:disabled {
+  cursor: default;
+}
+
+.big-button {
+  background: #8357c5;
+  border: none;
+  box-shadow: 0 2px 5px #a5afd7;
+  color: white;
+  font-weight: bold;
+  font-size: 32px;
+  width: 100%;
+  margin-bottom: 48px;
+  padding: 24px;
+}
+
+.big-button:disabled {
+  opacity: 0.8;
+}
+
+.button {
+  background: #8357c5;
+  border: none;
+  color: white;
+  font-weight: 500;
+  padding: 12px;
+}
+
+.button--link {
+  background: none;
+  border: none;
+  color: #a5afd7;
+  padding: 0;
+}
+
+.widget {
+  background: #464b5e;
+  margin-bottom: 48px;
+}
+
+.widget-header {
+  background: #3c4251;
+  color: #a5afd7;
+  padding: 16px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.widget-header__title {
+  margin: 0;
+}
+
+.widget__message {
+  color: #ffffff;
+  font-weight: 200;
+  letter-spacing: 1px;
+  padding: 32px;
+  text-align: center;
+  border-bottom: 2px solid #3c4251;
+}
+
+.option {
+  display: flex;
+  justify-content: space-between;
+  padding: 24px 16px;
+  border-bottom: 0.5px solid #333745;
+}
+
+.option__text {
+  color: white;
+  font-weight: 400;
+  font-size: 24px;
+  word-break: break-all;
+}
+
+.add-option-error {
+  color: #a5afd7;
+  font-style: italic;
+  font-size: 20px;
+  padding: 0 16px;
+  margin: 24px 0 0 0;
+}
+
+.add-option {
+  display: flex;
+  padding: 16px;
+}
+
+.add-option__input {
+  flex-grow: 1;
+  padding: 5px;
+}
+
+.box-form {
+  max-width: 960px;
+}
+
+/* ReactModal box */
+
+.ReactModalPortal > div {
+  opacity: 0;
+}
+
+.ReactModalPortal .ReactModal__Overlay {
+  transition: opacity 200ms ease-in-out;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.ReactModalPortal .ReactModal__Overlay--after-open {
+  opacity: 1;
+}
+
+.ReactModalPortal .ReactModal__Overlay--before-close {
+  opacity: 0;
+}
+
+.modal {
+  background: #8357c5;
+  color: white;
+  padding: 30px;
+  max-width: 480px;
+  outline: none;
+  text-align: center;
+}
+
+.modal__title {
+  margin: 0 0 26px 0;
+}
+
+.modal__body {
+  margin: 0 0 26px 0;
+  font-size: 26px;
+  font-weight: 300;
+  word-break: break-all;
+}
